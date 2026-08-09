@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+scikit-learn
+spacy
+python-docx
+pymupdf
+rapidfuzz
+numpy
+pandas
+sentence-transformers
+torch

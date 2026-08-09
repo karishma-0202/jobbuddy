@@ -1,0 +1,45 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java / Maven
+target/
+
+# Spring Boot secrets
+application.properties
+application.yml
+application-*.properties
+application-*.yml
+
+# Frontend
+node_modules/
+dist/
+build/
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+
+# Python temporary resumes / personal files
+temp_*.pdf
+*.pdf
+
+# Python generated files
+*.egg-info/
+
+# VS Code
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+Candidate.txt
