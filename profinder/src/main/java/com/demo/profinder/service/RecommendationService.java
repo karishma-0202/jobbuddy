@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
+
 import java.util.*;
 
 @Service
@@ -22,8 +23,13 @@ public class RecommendationService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    private static final String PYTHON_RESUME_API = "http://127.0.0.1:8000/recommend/resume";
-    private static final String PYTHON_MANUAL_API = "http://127.0.0.1:8000/recommend/manual";
+    private static final String PYTHON_RESUME_API =
+        System.getenv().getOrDefault("PYTHON_SERVICE_URL", "http://127.0.0.1:8000")
+        + "/recommend/resume";
+
+    private static final String PYTHON_MANUAL_API =
+        System.getenv().getOrDefault("PYTHON_SERVICE_URL", "http://127.0.0.1:8000")
+        + "/recommend/manual";
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
